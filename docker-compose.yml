@@ -2,7 +2,7 @@ version: "3"
 
 services:
   client:
-    image: pcrbot/gocqhttp:latest
+    image: xzsk2/gocqhttp-docker:latest
     volumes:
       - ./client:/data:delegated
     tty: true
@@ -13,14 +13,14 @@ services:
     depends_on:
       - bot
 
-  bot-monitor-web:
-    build: ./bot-monitor-web
-    ports:
-      - "9301:80"
-    environment:
-      - TZ=Asia/Shanghai
-    depends_on:
-      - bot
+#  bot-monitor-web:
+#    build: ./bot-monitor-web
+#    ports:
+#      - "9301:80"
+#    environment:
+#      - TZ=Asia/Shanghai
+#    depends_on:
+#      - bot
 
   bot:
     build: ./bot
