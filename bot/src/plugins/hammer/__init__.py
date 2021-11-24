@@ -6,7 +6,7 @@ from nonebot.adapters import Bot, Event
 from nonebot.typing import T_State
 import jieba.posseg as peg
 
-hammer = on_regex('[我|好].*[想|要].+')
+hammer = on_regex('[我|好].*[想|要|来].+')
 
 
 @hammer.handle()
