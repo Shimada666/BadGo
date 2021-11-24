@@ -1,0 +1,6 @@
+meta:
+  name: hammer
+  description: 你 x 个锤子
+  commands:
+    - 我想 xxx 触发
+config:

@@ -5,3 +5,4 @@ nonebot-plugin-apscheduler==0.1.2
 pydantic~=1.8.2
 alchemical==0.5.0
 superstream==0.1.1
+jieba==0.42.1
