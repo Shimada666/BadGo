@@ -1,0 +1,6 @@
+meta:
+  name: rp
+  description: 简单算法的人品插件
+  commands:
+    - /rp [测今天的人品]
+config:

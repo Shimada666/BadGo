@@ -1,0 +1,5 @@
+meta:
+  name: monitor
+  description: 插件管理 web 端
+  commands: []
+config:
