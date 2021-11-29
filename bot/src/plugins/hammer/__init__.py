@@ -1,7 +1,7 @@
 import random
 
 import httpx
-from nonebot import on_regex
+from nonebot import on_regex, on_command
 from nonebot.adapters import Bot, Event
 from nonebot.typing import T_State
 import jieba.posseg as peg
@@ -18,8 +18,6 @@ async def _(bot: Bot, event: Event, state: T_State):
     verb2 = from_msg[idx + 1]
 
     text = f'你{verb2}个🔨，就你还{verb2}'
-    if random.random() > 0.9:
-        text = '在测试我？你测试你妈呢傻逼东西'
     msg = [
         {
             'type': 'at',
