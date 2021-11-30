@@ -2,7 +2,7 @@ import os
 
 from fastapi import APIRouter
 
-from src.util.web_response import WebResponse
+from src.common.util.web_response import WebResponse
 
 router = APIRouter()
 
