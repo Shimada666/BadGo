@@ -1,5 +1,4 @@
 import random
-import numpy as np
 from nonebot import on_regex, on_command
 from nonebot.adapters import Bot, Event
 from nonebot.typing import T_State
@@ -32,7 +31,7 @@ blackjack = on_command("blackjack")
 class BlackJack:
     def __init__(self):
         self.Round = 1
-        self.total_score = np.array([0, 0])  # 总分的计分器
+        self.total_score = [0, 0]  # 总分的计分器
 
         self.poker_deck = 1  # 一共是使用几副牌
         self.poker_database = poker_name * self.poker_deck  # 最终生成的牌堆
@@ -40,7 +39,7 @@ class BlackJack:
         self.your_hand_poker = []
         self.pc_hand_poker = []
 
-        self.score = np.array([])
+        self.score = []
 
     def Dealing_Poker(self):
         # 发一张牌，并在牌堆中删除这张牌
@@ -137,7 +136,7 @@ class BlackJack:
         await blackjack.send(f'PC\'s hand poker:{pc_get[0]} , ?\n')
         self.your_hand_poker.extend(you_get)
         self.pc_hand_poker.extend(pc_get)
-        self.score = np.array([self.Score_Count(self.your_hand_poker), self.Score_Count(self.pc_hand_poker)])
+        self.score = [self.Score_Count(self.your_hand_poker), self.Score_Count(self.pc_hand_poker)]
         if self.score[0] == 21 or self.score[1] == 21:
             print('BlackJack')
             await blackjack.finish(f'BlackJack')
