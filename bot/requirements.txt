@@ -1,6 +1,5 @@
-nonebot2~=2.0.0a14
-nonebot-adapter-cqhttp~=2.0.0a14
+nonebot2==2.0.0a14
+nonebot-adapter-cqhttp==2.0.0a14
 nonebot-plugin-apscheduler==0.1.2
 superstream==0.1.1
-# jieba==0.42.1
 peewee==3.14.8
